@@ -17,3 +17,67 @@ html{
     --claro: #e2e9f0;
     --vidro: rgba(255, 255, 255, 0.1);
 }
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+nav.navegacao{
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.8);
+    z-index: 100;
+    padding: 20px 20px;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    gap: 3em;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 600;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0; /*Fica zerado para poder configurar ele em 100 no hover */
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria)); /* Não poder ser background-color*/
+
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+.cabecalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil{
+    width: 200px;
+    height: 450px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border: 4px solid var(--vidro);
+
+}
