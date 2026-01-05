@@ -79,6 +79,7 @@ nav.navegacao{
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border: 4px solid var(--vidro);
+    animation: flutuar 6s ease-in-out infinite;
 
 }
 
@@ -131,7 +132,7 @@ h1{
     border: 1px solid var(--vidro);
     backdrop-filter: blur(5px);
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
@@ -172,4 +173,84 @@ h1{
 .paragrafos-projeto{
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
+}
+
+.contato{
+    padding: 6rem 2rem;
+}
+
+.contato-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 13px;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    color: var(--claro);
+    outline: none;
+}
+
+.campo-form:focus{
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+.botao-form{
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), 
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%) 
+    var(--maisEscuro);
+}
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    
+    50%{
+        transform: translateY(-20px);
+    }
 }
