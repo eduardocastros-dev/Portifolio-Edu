@@ -40,6 +40,7 @@ nav.navegacao{
 }
 
 .menu-link{
+    font-size: 1.1rem;
     text-decoration: none;
     color: var(--claro);
     font-weight: 600;
@@ -74,8 +75,8 @@ nav.navegacao{
 }
 
 .foto-perfil{
-    width: 400px;
-    height: 450px;
+    width: 300px;
+    height: 330px;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border: 4px solid var(--vidro);
@@ -84,7 +85,7 @@ nav.navegacao{
 }
 
 h1{
-    font-size: 3.5em;
+    font-size: 2.5rem;
     color: var(--primaria);
     font-weight: bold;
     margin: 20px;
@@ -92,7 +93,8 @@ h1{
 
 .sub-titulo{
     color: var(--claro);
-    font-size: 1.3em;
+    margin-left: 10px;
+    font-size: 1.4rem;
     
 }
 
